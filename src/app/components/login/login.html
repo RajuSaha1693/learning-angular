@@ -1,0 +1,27 @@
+<div class="p-5 flex flex-col gap-5 place-items-center">
+  <form class="flex flex-col gap-5">
+    <input
+      type="text"
+      placeholder="Username"
+      class="border border-gray-600 p-2 italic rounded"
+      [(ngModel)]="username"
+      [ngModelOptions]="{ standalone: true }"
+    />
+    <input
+      type="password"
+      placeholder="Password"
+      class="border border-gray-600 p-2 italic rounded"
+      [(ngModel)]="password"
+      [ngModelOptions]="{ standalone: true }"
+    />
+  </form>
+  <div class="flex">
+    <button class="btn-primary" (click)="login()">Login</button>
+  </div>
+  @if(isLoggedIn){
+  <div>
+    <app-welcome [fullName]="fullName" (dataEmitter)="listentToEvent($event)" />
+    <p>{{ welcomeMessage }}</p>
+  </div>
+  }
+</div>
