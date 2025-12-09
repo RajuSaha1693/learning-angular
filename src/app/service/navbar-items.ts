@@ -7,9 +7,10 @@ import { MenuProps } from '../model/MenuProps';
 export class NavbarItems {
   private navItems: MenuProps[] = [
     { link: '', label: 'Home' },
-    { link: '/profile', label: 'Profile' },
-    { link: '/cart', label: 'Cart' },
-    { link: '/logout', label: 'Log Out' },
+    { link: 'profile', label: 'Profile' },
+    { link: 'product', label: 'Product' },
+    { link: 'cart', label: 'Cart' },
+    { link: 'logout', label: 'Log Out' },
   ];
 
   getNavbarList(): MenuProps[] {

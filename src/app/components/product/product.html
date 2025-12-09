@@ -1,0 +1,15 @@
+<p>product works!</p>
+@if(isLoading){
+<h3>Loading...</h3>
+} @if(!isLoading){
+<div class="grid grid-cols-6 gap-4 md:grid-cols-6 sm:grid-cols-3">
+  @for(product of products; track product.id){
+  <div class="product-card">
+    <p>{{ product.category | uppercase }}</p>
+    <img [src]="product.thumbnail" />
+    <p>{{ product.title }}</p>
+    <p>${{ product.price }}</p>
+  </div>
+  }
+</div>
+}
